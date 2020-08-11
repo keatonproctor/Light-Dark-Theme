@@ -3,7 +3,7 @@ body {
     --background-color: white;
     --text-color: black;
     --button-text-color: var(--background-color);
-    --transition-delay: 3s;
+    --transition-delay: 1.5s;
     
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@ body {
     height: 100vh;
     margin: 0;
 
+    transition: var(--transition-delay);
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -25,6 +26,7 @@ body.dark {
 .title {
     margin: 0;
     margin-bottom: .5rem;
+    font-size: 40px;
 }
 
 .theme-toggle-button {
@@ -39,4 +41,15 @@ body.dark {
     border-radius: .5em;
     border: none;
     outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+}
+
+.theme-toggle-button .icon  {
+    margin-right: .5em;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+    transform: scale(1.3);
 }
